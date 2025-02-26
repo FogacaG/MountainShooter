@@ -8,6 +8,7 @@ from pygame import Surface, Rect
 from pygame.font import Font
 
 from code.Const import C_WHITE, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME
+from code.EntityMediator import EntityMediator
 from code.entity import Entity
 from code.entityFactory import EntityFactory
 
@@ -46,12 +47,15 @@ class Level:
                     self.entity_list.append(EntityFactory.get_entity(choice))
 
 
-
-
             # Texto de level
             self.level_text(14, f'{self.name} - Timeout:{self.timeout / 1000:.1f}s', C_WHITE, (10, 5)) # tempo de duração da aula
             self.level_text(14, f'fps: {clock.get_fps(): .0f}', C_WHITE, (10, WIN_HEIGHT - 35))# clock FPS
             self.level_text(14, f'entidades: {len(self.entity_list)}', C_WHITE, (10, WIN_HEIGHT - 20)) #quantas entidades
+
+
+            #colissao dos inimigos
+            EntityMediator.verify_collision(entity_list=self.entity_list)
+            EntityMediator.verify_health(entity_list=self.entity_list)
             pygame.display.flip()
             pass
 

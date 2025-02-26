@@ -18,7 +18,22 @@ ENTITY_SPEED = {
     'Enemy1': 2,
     'Enemy2': 1
 }
-#c
+
+# h
+ENTITY_HEALTH = {
+    'lvl1bg0': 999,
+    'lvl1bg1': 999,
+    'lvl1bg2': 999,
+    'lvl1bg3': 999,
+    'lvl1bg4': 999,
+    'lvl1bg5': 999,
+    'lvl1bg6': 999,
+    'Player1': 300,
+    'Player2': 300,
+    'Enemy1': 50,
+    'Enemy2': 60,
+}
+# c
 EVENT_ENEMY = pygame.USEREVENT + 1
 
 # m
@@ -35,10 +50,8 @@ PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT, 'Player2': pygame.K_a}
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT, 'Player2': pygame.K_d}
 PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL, 'Player2': pygame.K_LCTRL}
 
-
-#s
+# s
 SPAWN_TIME = 4000
-
 
 # W
 WIN_WIDTH = 576
