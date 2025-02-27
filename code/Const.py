@@ -15,6 +15,11 @@ ENTITY_SPEED = {
     'lvl1bg4': 4,
     'lvl1bg5': 5,
     'lvl1bg6': 6,
+    'lvl2bg0': 0,
+    'lvl2bg1': 1,
+    'lvl2bg2': 2,
+    'lvl2bg3': 3,
+    'lvl2bg4': 4,
     'Player1': 3,
     'Player2': 3,
     'Enemy1': 1,
@@ -35,6 +40,11 @@ ENTITY_HEALTH = {
     'lvl1bg4': 999,
     'lvl1bg5': 999,
     'lvl1bg6': 999,
+    'lvl2bg0': 999,
+    'lvl2bg1': 999,
+    'lvl2bg2': 999,
+    'lvl2bg3': 999,
+    'lvl2bg4': 999,
     'Player1': 300,
     'Player2': 300,
     'Enemy1': 50,
@@ -53,14 +63,19 @@ ENTITY_DAMAGE = {
     'lvl1bg4': 0,
     'lvl1bg5': 0,
     'lvl1bg6': 0,
+    'lvl2bg0': 0,
+    'lvl2bg1': 0,
+    'lvl2bg2': 0,
+    'lvl2bg3': 0,
+    'lvl2bg4': 0,
     'Player1': 1,
     'Player2': 1,
     'Enemy1': 1,
     'Enemy2': 1,
     'Player1Shot': 25,
     'Player2Shot': 25,
-    'Enemy1Shot': 20,
-    'Enemy2Shot': 20,
+    'Enemy1Shot': 50,
+    'Enemy2Shot': 50,
 }
 
 ENTITY_SCORE = {
@@ -71,6 +86,11 @@ ENTITY_SCORE = {
     'lvl1bg4': 0,
     'lvl1bg5': 0,
     'lvl1bg6': 0,
+    'lvl2bg0': 0,
+    'lvl2bg1': 0,
+    'lvl2bg2': 0,
+    'lvl2bg3': 0,
+    'lvl2bg4': 0,
     'Player1': 0,
     'Player2': 0,
     'Enemy1': 100,
@@ -89,7 +109,7 @@ ENTITY_SHOT_DELAY = {
 }
 # c
 EVENT_ENEMY = pygame.USEREVENT + 1
-
+EVENT_TIMEOUT = pygame.USEREVENT + 2
 # m
 MENU_OPTION = ('NEW GAME 1P',
                'NEW GAME 2P - Cooperativo',
@@ -107,6 +127,9 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL, 'Player2': pygame.K_LCTRL}
 # s
 SPAWN_TIME = 4000
 
+# t
+TIMEOUT_STEP = 100
+TIMEOUT_LEVEL = 10000
 # W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324
